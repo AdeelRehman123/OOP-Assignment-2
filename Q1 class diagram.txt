@@ -1,0 +1,72 @@
+User (Parent Class)
+Private:
+ userID: int  
+ name: string  
+ paymentStatus: bool  
+
+Public:
+ User(id, name)  
+ registerUser()  
+ makePayment()  
+ checkPayment(): bool  
+ getUserID(): int  
+ getName(): string  
+
+Student (Inherits from User)
+Public:
+ Student(id, name)  
+
+Teacher (Inherits from User)
+Public:
+ Teacher(id, name)  
+
+Staff (Inherits from User)
+Public:
+ Staff(id, name)  
+
+Route
+Private:
+ routeID: int  
+ startLocation: string  
+ endLocation: string  
+ stops[10]: string  
+ stopCount: int  
+
+Public:
+ Route(id, start, end)  
+ addStop(stop: string)  
+ displayRoute()  
+ getRouteID(): int  
+
+Bus
+Private:
+ busID: int  
+ route: Route  
+ seatsAvailable: int  
+ usersOnBoard[30]: User  
+ userCount: int  
+
+Public:
+ Bus(id, route)  
+ addUser(user: User)  
+ displayBusDetails()  
+ getBusID(): int  
+
+TransportationSystem
+Private:
+ users[100]: User  
+ buses[20]: Bus  
+ routes[20]: Route  
+ userCount: int  
+ busCount: int  
+ routeCount: int  
+
+Public:
+ TransportationSystem()  
+ registerUser()  
+ makePayment()  
+ addRoute()  
+ addBus()  
+ assignUserToBus()  
+ displayAllBuses()
+
